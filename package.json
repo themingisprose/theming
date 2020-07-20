@@ -1,0 +1,37 @@
+{
+  "name": "theming_",
+  "version": "0.0.1",
+  "description": "WordPress Framework",
+  "scripts": {
+    "build": "npm run css",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 assets/scss -o assets/css/",
+    "css-prefix": "postcss --replace assets/css/style.css --use autoprefixer --map",
+    "css": "npm run css-compile && npm run css-prefix",
+    "watch": "nodemon -e scss -x \"npm run css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themingisprose/theming_.git"
+  },
+  "keywords": [
+    "wordpress",
+    "framework",
+    "wordpress-framework",
+    "theme"
+  ],
+  "author": "Theming is Prose",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/themingisprose/theming_/issues"
+  },
+  "homepage": "https://github.com/themingisprose/theming_#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
+    "postcss-cli": "^7.1.1"
+  }
+}

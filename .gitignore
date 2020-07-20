@@ -38,6 +38,11 @@ GitHub.sublime-settings
 # ignore node dependency directories
 node_modules/
 
+# ignore assets/css/*
+assets/*
+!assets/scss/
+!assets/js/
+
 # ignore log files and databases
 *.log
 *.sql
