@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html class="h-100">
-<head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php bloginfo( 'name' ) ?></title>
-	<?php wp_head(); ?>
-</head>
-<body <?php body_class( 'd-flex flex-column h-100' ); ?>>
+<?php
+/**
+ * The main template file
+ *
+ * @since Theming_ 0.0.1
+ */
+
+get_header();
+?>
 
 	<main class="flex-shrink-0">
 		<div class="container">
@@ -28,7 +28,5 @@
 ?>
 		</div>
 	</main>
-
-	<?php wp_footer(); ?>
-</body>
-</html>
+<?php
+get_footer();
