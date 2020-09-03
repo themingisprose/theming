@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/themingisprose/theming_#readme",
   "dependencies": {
+    "@popperjs/core": "^2.4.4",
     "bootstrap": "^5.0.0-alpha1"
   },
   "devDependencies": {
