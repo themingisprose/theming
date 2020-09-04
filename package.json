@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "WordPress Framework",
   "scripts": {
-    "build": "npm run css",
-    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 assets/scss -o assets/css/",
-    "css-prefix": "postcss --replace assets/css/style.css --use autoprefixer --map",
+    "build": "npm run css && npm run webpack",
+    "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 assets/src/scss -o assets/dist/css/",
+    "css-prefix": "postcss --replace assets/dist/css/style.css --use autoprefixer --map",
     "css": "npm run css-compile && npm run css-prefix",
-    "watch": "nodemon -e scss -x \"npm run css\""
+    "watch": "nodemon -e scss,js -x \"npm run css || npm run webpack\"",
+    "webpack": "webpack assets/src/js/app.js -o assets/dist/js/app.js --mode production"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,8 @@
     "autoprefixer": "^9.8.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
-    "postcss-cli": "^7.1.1"
+    "postcss-cli": "^7.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
