@@ -17,6 +17,10 @@
 		<?php wp_head(); ?>
 	</head>
 
-	<body <?php body_class() ?>>
+	<body <?php body_class() ?> data="no-jquery">
 
 		<?php wp_body_open(); ?>
+
+			<header id="site-header" role="banner">
+				<?php do_action( 'theming_site_header' ) ?>
+			</header>

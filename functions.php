@@ -1,5 +1,10 @@
 <?php
 /**
+ * Include files
+ */
+require_once( get_template_directory() . '/templates/navigation.php' );
+
+/**
  * Enqueue
  *
  * @since 0.0.1
@@ -14,4 +19,3 @@ function theming_enqueue(){
 	wp_enqueue_script( 'theming' );
 }
 add_action( 'wp_enqueue_scripts', 'theming_enqueue' );
-?>
