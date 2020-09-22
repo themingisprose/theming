@@ -1,21 +1,15 @@
 <?php
 /**
- * Include files
+ * CONTSTANTS
  */
-require_once( get_template_directory() . '/templates/navigation.php' );
+define( 'THEMING_THEME_DIR', get_template_directory() );
 
 /**
- * Enqueue
- *
- * @since 0.0.1
+ * Include classes files
  */
-function theming_enqueue(){
-	// Enqueue css
-	wp_register_style( 'theming', get_theme_file_uri( '/assets/dist/css/style.css' ) );
-	wp_enqueue_style( 'theming' );
+require_once( THEMING_THEME_DIR . '/class/class.theming-enqueue.php' );
 
-	// Enqueue js
-	wp_register_script( 'theming', get_theme_file_uri( 'assets/dist/js/app.js' ) );
-	wp_enqueue_script( 'theming' );
-}
-add_action( 'wp_enqueue_scripts', 'theming_enqueue' );
+/**
+ * Include template files
+ */
+require_once( THEMING_THEME_DIR . '/templates/navigation.php' );
