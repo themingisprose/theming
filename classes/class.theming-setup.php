@@ -143,6 +143,8 @@ if ( ! class_exists( 'Theming_Setup' ) ) {
 			/**
 			 * Filters menu locations
 			 * @param array $locations 		Array of locations
+			 *
+			 * @since Theming_ 0.0.1
 			 */
 			register_nav_menus( apply_filters( 'theming_menu_locations', $locations ) );
 		}
