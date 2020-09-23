@@ -17,7 +17,7 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		 *
 		 * @since Theming_ 0.0.1
 		 */
-		public function enqueue()
+		public function init()
 		{
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -59,5 +59,5 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 	    }
 	}
 
-	Theming_Enqueue::getInstance()->enqueue();
+	Theming_Enqueue::getInstance()->init();
 }

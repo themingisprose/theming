@@ -7,7 +7,8 @@ define( 'THEMING_THEME_DIR', get_template_directory() );
 /**
  * Include classes files
  */
-require_once( THEMING_THEME_DIR . '/class/class.theming-enqueue.php' );
+require_once( THEMING_THEME_DIR . '/classes/class.theming-setup.php' );
+require_once( THEMING_THEME_DIR . '/classes/class.theming-enqueue.php' );
 
 /**
  * Include template files
