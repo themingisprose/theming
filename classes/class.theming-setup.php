@@ -134,6 +134,17 @@ if ( ! class_exists( 'Theming_Setup' ) ) {
 			 * provide it for us.
 			 */
 			add_theme_support( 'title-tag' );
+
+			// Register navigation menus
+			$locations = array(
+				'top_menu'	=> __( 'Top Menu', 'theming' ),
+			);
+
+			/**
+			 * Filters menu locations
+			 * @param array $locations 		Array of locations
+			 */
+			register_nav_menus( apply_filters( 'theming_menu_locations', $locations ) );
 		}
 
 		/**
