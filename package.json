@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "WordPress Framework",
   "scripts": {
-    "build": "npm run css && webpack",
+    "build": "npm run css && webpack --config webpack.prod.js",
     "css-compile": "node-sass --include-path node_modules --output-style compressed --source-map true --source-map-contents true --precision 6 assets/src/scss -o assets/dist/css/",
     "css-prefix": "postcss --replace assets/dist/css/style.css --use autoprefixer --map",
     "css": "npm run css-compile && npm run css-prefix",
-    "watch": "nodemon -e scss,js -x \"npm run css || webpack\""
+    "watch": "nodemon -e scss -x \"npm run css && webpack --config webpack.dev.js\""
   },
   "repository": {
     "type": "git",
@@ -26,15 +26,17 @@
   },
   "homepage": "https://github.com/themingisprose/theming_#readme",
   "dependencies": {
-    "@popperjs/core": "^2.4.4",
-    "bootstrap": "^5.0.0-alpha1"
+    "@popperjs/core": "^2.6.0",
+    "bootstrap": "^5.0.0-beta1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.6",
+    "clean-webpack-plugin": "^3.0.0",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4",
-    "postcss-cli": "^7.1.1",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "nodemon": "^2.0.7",
+    "postcss-cli": "^7.1.2",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.7.3"
   }
 }
