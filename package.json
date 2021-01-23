@@ -25,12 +25,11 @@
     "url": "https://github.com/themingisprose/theming_/issues"
   },
   "homepage": "https://github.com/themingisprose/theming_#readme",
-  "dependencies": {
-    "@popperjs/core": "^2.6.0",
-    "bootstrap": "^5.0.0-beta1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "@popperjs/core": "^2.6.0",
     "autoprefixer": "^9.8.6",
+    "bootstrap": "^5.0.0-beta1",
     "clean-webpack-plugin": "^3.0.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.7",
