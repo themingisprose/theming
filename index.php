@@ -8,25 +8,27 @@
 get_header();
 ?>
 
-	<main class="flex-shrink-0">
 		<div class="container">
-			<h1 class="mt-5"><a href="<?php echo home_url() ?>"><?php bloginfo( 'name' ) ?></a></h1>
-			<p class="lead"><?php bloginfo( 'description' ) ?></p>
-
+			<div class="post-container mx-auto px-3">
 <?php
 			if ( have_posts() ) :
+
 				while ( have_posts() ) : the_post();
-?>
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-				<?php the_content() ?>
-			</article>
-<?php
+
+					get_template_part( 'template-parts/content', get_post_type() );
+
 				endwhile;
+
+			else :
+
+			?>
+			<p class="h3 my-5"><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'theming' ); ?></p>
+			<?php
+
 			endif;
 
 ?>
+			</div>
 		</div>
-	</main>
 <?php
 get_footer();

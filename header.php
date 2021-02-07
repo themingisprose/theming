@@ -24,3 +24,5 @@
 			<header id="site-header" role="banner">
 				<?php do_action( 'theming_site_header' ) ?>
 			</header>
+
+			<main>
