@@ -19,6 +19,8 @@ get_header();
 
 				endwhile;
 
+				theming_posts_navigation();
+
 			else :
 
 			?>

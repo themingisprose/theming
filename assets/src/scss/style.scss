@@ -8,3 +8,34 @@ $post_container_width:	768px;
 		max-width: $post_container_width;
 	}
 }
+
+//
+// Navigation
+//
+.posts-pagination{
+	ul{
+		@extend .pagination;
+		@extend .justify-content-center;
+		li{
+			@extend .page-item;
+			.page-numbers{
+				@extend .page-link;
+				background-color: rgba($white, .7);
+				@extend .border-0;
+				@extend .rounded-0;
+				@extend .mx-1;
+				&:hover{
+					@extend .bg-white;
+				}
+				&.current{
+					@extend .bg-primary;
+					@extend .text-white;
+					&:hover{
+						@extend .bg-primary;
+						@extend .text-white;
+					}
+				}
+			}
+		}
+	}
+}
