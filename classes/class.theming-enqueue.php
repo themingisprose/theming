@@ -43,6 +43,14 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		{
 			wp_register_script( 'theming', get_theme_file_uri( 'assets/dist/js/app.js' ) );
 			wp_enqueue_script( 'theming' );
+
+			/**
+			 * Adds JavaScript to pages with the comment form to support
+			 * sites with threaded comments (when in use).
+			 */
+			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) :
+				wp_enqueue_script( 'comment-reply' );
+			endif;
 		}
 
 		/**

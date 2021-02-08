@@ -21,6 +21,8 @@ get_header();
 
 				theming_posts_navigation();
 
+				comments_template();
+
 			else :
 
 			?>

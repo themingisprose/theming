@@ -55,3 +55,45 @@ function theming_posts_navigation( $the_query = null ){
 <?php
 	endif;
 }
+
+/**
+ * Make comments form fields Bootstrap like
+ *
+ * @since Theming_ 0.0.1
+ */
+function theming_comment_form_fields(){
+	$commenter 	= wp_get_current_commenter();
+	$req		= get_option( 'require_name_email' );
+	$aria_req	= ( $req ? " aria-required='true'" : '' );
+	$html_req	= ( $req ? " required='required'" : '' );
+	$html5		= current_theme_supports( 'html5' ) ? true : null;
+	$form_group	= '<div class="form-group %s">%s</div>';
+	$fields = array(
+		'author'	=> sprintf( $form_group, 'comment-form-author col-lg-4 col-12 mt-3',
+						'<label for="author">'. __( 'Name', 'theming' ) .( $req ? ' <span class="required">*</span>' : '' ) . '</label> '.
+						'<input id="author" name="author" type="text" class="form-control" value="' . esc_attr( $commenter['comment_author'] ) . '" aria-describedby="author" maxlength="245"' . $aria_req . $html_req . ' />' ),
+		'email'		=> sprintf( $form_group, 'comment-form-email col-lg-4 col-12 mt-3',
+						'<label for="email">'. __( 'Email', 'theming' ) .( $req ? ' <span class="required">*</span>' : '' ) . '</label> '.
+						'<input id="email" name="email" ' . ( $html5 ? 'type="email"' : 'type="text"' ) . ' class="form-control" value="' . esc_attr( $commenter['comment_author_email'] ) . '" aria-describedby="email-notes" maxlength="100"' . $aria_req . $html_req . ' />' ),
+		'url'		=> sprintf( $form_group, 'comment-form-url col-lg-4 col-12 mt-3',
+						'<label for="url">'. __( 'Website', 'theming' ) .'</label> '.
+						'<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) . '" aria-describedby="email-notes" maxlength="200" />' ),
+		'cookies'	=> sprintf( $form_group, 'col-12 mt-3',
+						'<input id="cookies-consent" name="form-check-input" type="checkbox" value="yes">'.
+						'<label for="cookies-consent" class="form-check-label ms-2">'. __( 'Save my name, email, and website in this browser for the next time I comment.', 'theming' ) .'</label>' ),
+	);
+	return $fields;
+}
+add_filter( 'comment_form_default_fields', 'theming_comment_form_fields' );
+
+/**
+ * Make comments textarea Bootstrap like
+ *
+ * @since Twenty'em 1.2
+ */
+function theming_comment_form_textarea() {
+	$comment_area = '<div class="form-group comment-form-comment col-12"><label for="comment">' . __( 'Comment', 'theming' ) . '</label>' .
+					'<textarea id="comment" class="form-control" name="comment" rows="8" aria-required="true" required="required" maxlength="65525"></textarea></div>';
+	return $comment_area;
+}
+add_filter('comment_form_field_comment', 'theming_comment_form_textarea');
