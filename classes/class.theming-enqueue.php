@@ -21,6 +21,7 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		{
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_styles' ) );
 		}
 
 		/**
@@ -51,6 +52,17 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) :
 				wp_enqueue_script( 'comment-reply' );
 			endif;
+		}
+
+		/**
+		 * Handle admin styles
+		 *
+		 * @since Theming_ 0.0.0
+		 */
+		public function admin_enqueue_styles()
+		{
+			wp_register_style( 'admin', get_theme_file_uri( '/assets/dist/css/admin.css' ) );
+			wp_enqueue_style( 'admin' );
 		}
 
 		/**
