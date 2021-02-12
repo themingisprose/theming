@@ -2,16 +2,14 @@
 /**
  * Include classes files
  */
-require_once( get_template_directory() . '/classes/class.theming-setup.php' );
-require_once( get_template_directory() . '/classes/class.theming-enqueue.php' );
-require_once( get_template_directory() . '/classes/class.theming-walker-comment.php' );
+require_once( get_template_directory() . '/classes/index.php' );
 
 /**
  * Include Files
  */
-require_once( get_template_directory() . '/inc/functions.php' );
+require_once( get_template_directory() . '/inc/index.php' );
 
 /**
  * Include template files
  */
-require_once( get_template_directory() . '/templates/navigation.php' );
+require_once( get_template_directory() . '/templates/index.php' );
