@@ -5,7 +5,8 @@
  * @since Theming_ 0.0.1
  */
 if ( ! class_exists( 'Theming_Admin' ) ) :
-	class Theming_Admin{
+	class Theming_Admin
+	{
 
 		/**
 		 * @var null
@@ -112,6 +113,6 @@ if ( ! class_exists( 'Theming_Admin' ) ) :
 	    }
 	}
 
-Theming_Admin::get_instance()->init();
+	Theming_Admin::get_instance()->init();
 
 endif;
