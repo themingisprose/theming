@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template for displaying the sidebar.
+ *
+ * @since Theming_ 0.0.1
+ */
+?>
 <section id="sidebar" class="py-5 mb-5">
 	<div class="container">
 		<div class="row">
