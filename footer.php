@@ -14,7 +14,7 @@
 
 			<div id="colophon" class="py-4">
 
-				<div class="container">
+				<div class="container d-md-flex justify-content-md-between">
 
 					<div id="copyright" class="footer-copyright">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
@@ -25,6 +25,28 @@
 							_x( 'Y', 'copyright date format', 'rex' )
 						);
 						?>
+					</div>
+
+					<div id="social-profiles" class="footer-social ml-auto text-center">
+						<?php
+						$profiles = new Theming_Social_Options;
+						$profiles = $profiles->fields();
+						?>
+						<ul class="list-inline mb-0 social">
+						<?php
+						foreach ( $profiles as $key => $value ) :
+							if ( ! theming_option( $value['option'], false ) )
+								continue;
+						?>
+							<li class="list-inline-item social-item">
+								<a href="<?php theming_option( $value['option'] ) ?>">
+									<?php echo $value['label'] ?>
+								</a>
+							</li>
+						<?php
+						endforeach;
+						?>
+						</ul>
 					</div>
 
 				</div>
