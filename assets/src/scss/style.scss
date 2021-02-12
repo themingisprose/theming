@@ -39,3 +39,12 @@ $post_container_width:	768px;
 		}
 	}
 }
+
+//
+// Widgets
+//
+.widget{
+	ul{
+		@extend .list-unstyled;
+	}
+}
