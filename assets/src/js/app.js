@@ -16,7 +16,7 @@
 // Import just what we need
 
 // If you're importing tooltips or popovers, be sure to include our Popper.js dependency
-// import { createPopper } from '../../../node_modules/@popperjs/core';
+import { createPopper } from '@popperjs/core';
 
 // You can specify which plugins you need
 // import { Tooltip, Toast, Popover } from 'bootstrap';

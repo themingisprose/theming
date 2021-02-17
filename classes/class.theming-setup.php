@@ -137,7 +137,7 @@ if ( ! class_exists( 'Theming_Setup' ) ) {
 
 			// Register navigation menus
 			$locations = array(
-				'top_menu'	=> __( 'Top Menu', 'theming' ),
+				'top-menu'	=> __( 'Top Menu', 'theming' ),
 			);
 
 			/**
