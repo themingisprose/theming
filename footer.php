@@ -16,15 +16,17 @@
 
 				<div class="container d-md-flex justify-content-md-between">
 
-					<div id="copyright" class="footer-copyright">
+					<div id="copyright" class="footer-copyright d-flex justify-content-center align-items-center mb-3 mb-md-0">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-						&copy;
-						<?php
-						echo date_i18n(
-							/* translators: Copyright date format, see https://www.php.net/date */
-							_x( 'Y', 'copyright date format', 'rex' )
-						);
-						?>
+						<span class="ms-3">
+							&copy;
+							<?php
+							echo date_i18n(
+								/* translators: Copyright date format, see https://www.php.net/date */
+								_x( 'Y', 'copyright date format', 'rex' )
+							);
+							?>
+						</span>
 					</div>
 
 					<div id="social-profiles" class="footer-social ml-auto text-center">

@@ -6,9 +6,8 @@
  */
 ?>
 
-<header class="entry-header">
+<header class="entry-header mb-4">
 
-	<div class="entry-header-inner">
 	<?php
 
 	if ( is_singular() ) :
@@ -44,6 +43,5 @@
 		<?php
 	endif;
 	?>
-	</div>
 
 </header>
