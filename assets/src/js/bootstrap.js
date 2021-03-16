@@ -22,4 +22,4 @@ import { createPopper } from '@popperjs/core';
 // import { Tooltip, Toast, Popover } from 'bootstrap';
 
 // Alternatively, you may import plugins individually as needed:
-import Collapse from '../../../node_modules/bootstrap/js/dist/collapse';
+import { Collapse } from 'bootstrap';

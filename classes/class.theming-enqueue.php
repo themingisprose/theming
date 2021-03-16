@@ -42,8 +42,8 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		 */
 		public function enqueue_scripts()
 		{
-			wp_register_script( 'theming', get_theme_file_uri( 'assets/dist/js/app.js' ) );
-			wp_enqueue_script( 'theming' );
+			wp_register_script( 'bootstrap', get_theme_file_uri( 'assets/dist/js/bootstrap.js' ) );
+			wp_enqueue_script( 'bootstrap' );
 
 			/**
 			 * Adds JavaScript to pages with the comment form to support

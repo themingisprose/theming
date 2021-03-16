@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
 	entry: {
-		app: './assets/src/js/app.js',
+		bootstrap: './assets/src/js/bootstrap.js',
 	},
 	plugins: [
 		new CleanWebpackPlugin(),
