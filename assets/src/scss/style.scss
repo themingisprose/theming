@@ -48,3 +48,32 @@ $post_container_width:	768px;
 		@extend .list-unstyled;
 	}
 }
+
+//
+// Comments
+//
+.comment{
+	div[class*="depth"]{
+		@extend .ms-5;
+		@extend .border-top;
+		@extend .border-light;
+	}
+	&.depth-1{
+		@extend .border-bottom;
+		@extend .border-secondary;
+		&:last-child{
+			@extend .border-0;
+		}
+	}
+	&-reply-title{
+		@extend .h5;
+		small{
+			@extend .mx-3;
+		}
+	}
+	&-reply-title{
+		@extend .h5;
+		@extend .fw-bold;
+		@extend .text-secondary;
+	}
+}

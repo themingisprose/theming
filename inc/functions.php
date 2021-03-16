@@ -98,7 +98,7 @@ function theming_comment_form_fields(){
 						'<label for="url">'. __( 'Website', 'theming' ) .'</label> '.
 						'<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' class="form-control" value="' . esc_attr( $commenter['comment_author_url'] ) . '" aria-describedby="email-notes" maxlength="200" />' ),
 		'cookies'	=> sprintf( $form_group, 'col-12 mt-3',
-						'<input id="cookies-consent" name="form-check-input" type="checkbox" value="yes">'.
+						'<input id="cookies-consent" class="form-check-input" name="wp-comment-cookies-consent" type="checkbox" value="yes">'.
 						'<label for="cookies-consent" class="form-check-label ms-2">'. __( 'Save my name, email, and website in this browser for the next time I comment.', 'theming' ) .'</label>' ),
 	);
 	return $fields;

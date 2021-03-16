@@ -10,7 +10,7 @@ if ( get_the_author_meta( 'description' ) ) :
 <div class="entry-author author-bio mt-5 row">
 	<div class="author-title-wrapper col-2">
 		<div class="author-avatar vcard">
-			<?php echo get_avatar( get_the_author_meta( 'ID' ), 128, '', get_the_author_meta( 'display_name' ), array( 'class' => 'w-100 h-auto' ) ); ?>
+			<?php echo get_avatar( get_the_author_meta( 'ID' ), 128, '', get_the_author_meta( 'display_name' ), array( 'class' => 'w-100 h-auto rounded-circle' ) ); ?>
 		</div>
 	</div>
 	<div class="col-10">
