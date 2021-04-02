@@ -29,12 +29,12 @@
 <?php if ( is_singular() ) : ?>
 <div class="row my-5">
 
-	<div class="col-md-6 py-3">
-		<?php previous_post_link() ?>
+	<div class="col-md-6 py-3 d-flex flex-column">
+		<?php previous_post_link( sprintf( __( '<small class="text-muted">%s Previous</small>', 'theming' ), theming_get_icon_svg( 'ui', 'arrow_left', 16 ) ) .' %link' ) ?>
 	</div>
 
-	<div class="col-md-6 py-3 text-end">
-		<?php next_post_link() ?>
+	<div class="col-md-6 py-3 text-end d-flex flex-column">
+		<?php next_post_link( sprintf( __( '<small class="text-muted">Next %s</small>', 'theming' ), theming_get_icon_svg( 'ui', 'arrow_right', 16 ) ) .' %link' ) ?>
 	</div>
 
 </div>

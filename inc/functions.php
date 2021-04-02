@@ -116,3 +116,16 @@ function theming_comment_form_textarea() {
 	return $comment_area;
 }
 add_filter('comment_form_field_comment', 'theming_comment_form_textarea');
+
+/**
+ * Gets the SVG code for a given icon.
+ * @param string $group The icon group.
+ * @param string $icon The icon.
+ * @param int    $size The icon size in pixels.
+ * @return string
+ *
+ * @since Theming_ 0.0.1
+ */
+function theming_get_icon_svg( $group, $icon, $size = 24 ) {
+	return Theming_SVG_Icons::get_svg( $group, $icon, $size );
+}

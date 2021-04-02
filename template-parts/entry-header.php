@@ -18,8 +18,14 @@
 
 	?>
 	<small class="entry-meta">
-		<time class="entry-date me-3"><?php echo esc_html( get_the_date() ) ?></time>
-		<span class="entry-by me-3"><?php echo esc_html( get_the_author() ) ?></span>
+		<time class="entry-date me-3">
+			<span class="me-1"><?php echo theming_get_icon_svg( 'ui', 'calendar', 16 ) ?></span>
+			<?php echo esc_html( get_the_date() ) ?>
+		</time>
+		<span class="entry-by me-3">
+			<span class="me-1"><?php echo theming_get_icon_svg( 'ui', 'user', 16 ) ?></span>
+			<?php echo esc_html( get_the_author() ) ?>
+		</span>
 	</small>
 	<?php
 
