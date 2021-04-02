@@ -16,6 +16,7 @@
 		the_title( '<h2 class="entry-title h1"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
 	endif;
 
+	if ( ! is_page() ) :
 	?>
 	<small class="entry-meta">
 		<time class="entry-date me-3">
@@ -28,6 +29,7 @@
 		</span>
 	</small>
 	<?php
+	endif;
 
 	if ( has_post_thumbnail() ) :
 

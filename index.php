@@ -19,9 +19,11 @@ get_header();
 
 				endwhile;
 
-				theming_posts_navigation();
+				if ( ! is_page() ) :
+					theming_posts_navigation();
 
-				comments_template();
+					comments_template();
+				endif;
 
 			else :
 

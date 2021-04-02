@@ -26,7 +26,7 @@
 
 </article>
 
-<?php if ( is_singular() ) : ?>
+<?php if ( is_singular() && ! is_page() ) : ?>
 <div class="row my-5">
 
 	<div class="col-md-6 py-3 d-flex flex-column">
