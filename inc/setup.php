@@ -114,7 +114,8 @@ function theming_setup(){
 
 	// Register navigation menus
 	$locations = array(
-		'top-menu'	=> __( 'Top Menu', 'theming' ),
+		'top-menu'		=> __( 'Top Menu', 'theming' ),
+		'footer-menu'	=> __( 'Footer Menu', 'theming' ),
 	);
 
 	/**

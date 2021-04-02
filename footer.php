@@ -29,26 +29,21 @@
 						</span>
 					</div>
 
-					<div id="social-profiles" class="footer-social ml-auto text-center">
+					<div class="ml-auto text-center">
 						<?php
-						$profiles = new Theming_Social_Options;
-						$profiles = $profiles->fields();
+						wp_nav_menu( array(
+							'theme_location'	=> 'footer-menu',
+							'container'			=> 'nav',
+							'container_id'		=> 'the-footer-menu',
+							'menu_class'		=> 'list-inline',
+							'item_class'		=> 'list-inline-item text-danger',
+							'items_wrap'		=> '%3$s',
+							'depth'				=> 1,
+							'link_before'		=> '<span>',
+							'link_after'		=> '</span>',
+							'fallback_cb'		=> false,
+						) );
 						?>
-						<ul class="list-inline mb-0 social">
-						<?php
-						foreach ( $profiles as $key => $value ) :
-							if ( ! theming_option( $value['option'], false ) )
-								continue;
-						?>
-							<li class="list-inline-item social-item">
-								<a href="<?php theming_option( $value['option'] ) ?>">
-									<?php echo $value['label'] ?>
-								</a>
-							</li>
-						<?php
-						endforeach;
-						?>
-						</ul>
 					</div>
 
 				</div>
