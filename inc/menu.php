@@ -39,12 +39,11 @@ function theming_get_social_link_svg( $uri, $size = 24 ) {
  */
 function theming_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Change SVG icon inside social links menu if there is supported URL.
-	if ( 'footer-menu' === $args->theme_location ) {
+	if ( 'footer-menu' === $args->theme_location ) :
 		$svg = theming_get_social_link_svg( $item->url, 24 );
-		if ( ! empty( $svg ) ) {
+		if ( ! empty( $svg ) )
 			$item_output = str_replace( $args->link_before, $svg, $item_output );
-		}
-	}
+	endif;
 
 	return $item_output;
 }
