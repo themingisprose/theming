@@ -31,7 +31,7 @@ function theming_top_navbar(){
 						'container'			=> 'div',
 						'container_class'	=> 'collapse navbar-collapse',
 						'container_id'		=> 'the-top-menu',
-						'menu_class'		=> 'navbar-nav',
+						'menu_class'		=> 'navbar-nav ms-auto',
 						'depth'				=> 2,
 						'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
 						'walker'			=> new WP_Bootstrap_Navwalker(),
