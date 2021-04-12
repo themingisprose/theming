@@ -19,9 +19,8 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		 */
 		public function init()
 		{
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
-			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-			add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_styles' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
 		}
 
 		/**
@@ -29,10 +28,10 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		 *
 		 * @since Theming_ 0.0.1
 		 */
-		public function enqueue_styles()
+		public function styles()
 		{
-			wp_register_style( 'theming', get_theme_file_uri( '/assets/dist/css/style.css' ) );
-			wp_enqueue_style( 'theming' );
+			wp_register_style( 'theming-style', get_theme_file_uri( '/assets/dist/css/style.css' ) );
+			wp_enqueue_style( 'theming-style' );
 		}
 
 		/**
@@ -40,10 +39,10 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		 *
 		 * @since Theming_ 0.0.1
 		 */
-		public function enqueue_scripts()
+		public function scripts()
 		{
-			wp_register_script( 'bootstrap', get_theme_file_uri( 'assets/dist/js/bootstrap.js' ) );
-			wp_enqueue_script( 'bootstrap' );
+			wp_register_script( 'theming-bootstrap', get_theme_file_uri( 'assets/dist/js/bootstrap.js' ) );
+			wp_enqueue_script( 'theming-bootstrap' );
 
 			/**
 			 * Adds JavaScript to pages with the comment form to support
@@ -55,22 +54,11 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 		}
 
 		/**
-		 * Handle admin styles
-		 *
-		 * @since Theming_ 0.0.0
-		 */
-		public function admin_enqueue_styles()
-		{
-			wp_register_style( 'admin', get_theme_file_uri( '/assets/dist/css/admin.css' ) );
-			wp_enqueue_style( 'admin' );
-		}
-
-		/**
 		 * Get Instance
 		 *
 		 * @since Theming_ 0.0.1
 		 */
-	    public static function getInstance() : self
+	    public static function get_instance() : self
 	    {
 	        if (null === self::$instance) {
 	            self::$instance = new self();
@@ -79,5 +67,5 @@ if ( ! class_exists( 'Theming_Enqueue' ) ) {
 	    }
 	}
 
-	Theming_Enqueue::getInstance()->init();
+	Theming_Enqueue::get_instance()->init();
 }
