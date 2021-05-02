@@ -1,14 +1,6 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap";
 
-$post_container_width:	768px;
-
-.post{
-	&-container{
-		max-width: $post_container_width;
-	}
-}
-
 //
 // Navigation
 //

@@ -9,7 +9,7 @@ get_header();
 ?>
 
 		<div class="container">
-			<div class="post-container mx-auto px-3">
+			<div class="post-container mx-auto">
 <?php
 			if ( have_posts() ) :
 
