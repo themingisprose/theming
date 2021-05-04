@@ -36,7 +36,7 @@
 							'container'			=> 'nav',
 							'container_id'		=> 'the-footer-menu',
 							'menu_class'		=> 'list-inline',
-							'item_class'		=> 'list-inline-item text-danger',
+							'item_class'		=> 'list-inline-item',
 							'items_wrap'		=> '%3$s',
 							'depth'				=> 1,
 							'link_before'		=> '<span>',
