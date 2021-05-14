@@ -105,21 +105,9 @@ abstract class Theming_Setting_Fields
 	 *
 	 * @since Theming_ 0.0.1
 	 */
-	public function get_option( $option ){
-		/*if ( ! $option )
-			return;*/
-
+	public function get_option( $option )
+	{
 		$value = get_option( $this->option_name );
-
-		/*if ( $option ) :
-			if ( is_plugin_active( 'sitepress-multilingual-cms/sitepress.php' ) && $lang ) :
-				$current_lang = apply_filters( 'wpml_current_language', NULL );
-				$value = $value[$option .'_'. $current_lang];
-			else :
-				$value = $value[$option];
-			endif;
-		endif;*/
-
 		return $value[$option];
 	}
 
