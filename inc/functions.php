@@ -1,21 +1,22 @@
 <?php
 /**
- * Get the option value from 'theming_options' row in wp_options table
+ * Show the option value from 'theming_options' row in wp_options table
  * @param string $option 	Required. Option name.
- * @param bool $echo 		Echo or return. Default echo;
  *
  * @since Theming_ 0.0.1
  */
-function theming_option( $option, $echo = true ){
-	if ( ! $option )
-		return;
+function theming_option( $option ){
+	echo theming_get_option( $option );
+}
 
-	$value = get_option( 'theming_options' );
-
-	if ( $echo )
-		echo $value[$option];
-
-	return $value[$option];
+/**
+ * Get the option value from 'theming_options' row in wp_options table
+ * @param string $option 	Required. Option name.
+ *
+ * @since Theming_ 0.0.1
+ */
+function theming_get_option( $option ){
+	return Theming_Admin::get_option( $option );
 }
 
 /**

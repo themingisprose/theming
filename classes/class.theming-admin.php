@@ -109,6 +109,20 @@ class Theming_Admin
 	}
 
 	/**
+	 * Get the option value from 'theming_options' row in wp_options table
+	 * @param string $option 	Required. Option name.
+	 * @access static
+	 *
+	 * @since Theming_ 0.0.1
+	 */
+	public static function get_option( $option )
+	{
+		$admin = new Theming_Admin;
+		$value = get_option( $admin->option_name );
+		return $value[$option];
+	}
+
+	/**
 	 * Get Instance
 	 *
 	 * @since Theming_ 0.0.1
