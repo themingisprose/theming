@@ -167,7 +167,7 @@ abstract class Theming_Setting_Fields
 		<div class="mb-2">
 		<label for="<?php echo $option ?>" class="description d-block mb-2"><?php echo $label ?></label>
 		<?php
-			if ( 'textarea' == $type ) :
+			if ( 'editor' == $type ) :
 				$settings = array(
 					'media_buttons'	=> false,
 					'textarea_rows'	=> 7,
@@ -183,12 +183,12 @@ abstract class Theming_Setting_Fields
 					),
 				);
 				wp_editor( $this->get_option( $option ), $option, $settings );
-			else :
+			elseif ( 'textarea' == $type ) :
 		?>
+		<textarea id="<?php echo $option ?>" class="regular-text mb-3" name="<?php echo $option ?>" cols="30" rows="5"><?php echo $this->get_option( $option ) ?></textarea>
+		<?php else : ?>
 		<input id="<?php echo $option ?>" class="regular-text mb-3" type="<?php echo $type ?>" name="<?php echo $option ?>" value="<?php echo $this->get_option( $option ) ?>">
-		<?php
-			endif;
-		?>
+		<?php endif; ?>
 		</div>
 	<?php
 	}
