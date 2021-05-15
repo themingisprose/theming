@@ -22,7 +22,10 @@
 
 	</div>
 
-	<?php get_template_part( 'template-parts/entry-footer' ); ?>
+	<?php
+	if ( ! is_page() )
+		get_template_part( 'template-parts/entry-footer' );
+	?>
 
 </article>
 
