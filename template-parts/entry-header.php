@@ -45,7 +45,7 @@
 
 	if ( has_excerpt() && is_singular() ) :
 		?>
-		<div class="entry-exceprt lead">
+		<div class="entry-excerpt lead">
 			<?php the_excerpt(); ?>
 		</div>
 		<?php
