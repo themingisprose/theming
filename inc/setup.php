@@ -178,17 +178,5 @@ function theming_register_sidebars(){
 			)
 		)
 	);
-
-	// Footer #4.
-	register_sidebar(
-		array_merge(
-			$args,
-			array(
-				'name'        => __( 'Footer #4', 'theming' ),
-				'id'          => 'sidebar-4',
-				'description' => __( 'Widgets in this area will be displayed in the fourth column in the footer.', 'theming' ),
-			)
-		)
-	);
 }
 add_action( 'widgets_init', 'theming_register_sidebars' );
