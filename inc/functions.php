@@ -1,25 +1,5 @@
 <?php
 /**
- * Show the option value from 'theming_options' row in wp_options table
- * @param string $option 	Required. Option name.
- *
- * @since Theming_ 0.0.1
- */
-function theming_option( $option ){
-	echo theming_get_option( $option );
-}
-
-/**
- * Get the option value from 'theming_options' row in wp_options table
- * @param string $option 	Required. Option name.
- *
- * @since Theming_ 0.0.1
- */
-function theming_get_option( $option ){
-	return Theming_Admin::get_option( $option );
-}
-
-/**
  * Posts navigation
  * @param object $the_query 	Default to $wp_query object.
  *
