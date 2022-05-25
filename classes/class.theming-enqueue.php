@@ -55,17 +55,6 @@ class Theming_Enqueue
 	}
 
 	/**
-	 * Handle admin styles
-	 *
-	 * @since Theming_ 0.0.1
-	 */
-	public function admin_styles()
-	{
-		wp_register_style( 'theming-admin', get_theme_file_uri( '/assets/dist/css/admin.css' ) );
-		wp_enqueue_style( 'theming-admin' );
-	}
-
-	/**
 	 * Get Instance
 	 *
 	 * @since Theming_ 0.0.1
