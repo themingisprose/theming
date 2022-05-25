@@ -2,7 +2,7 @@
 /**
  * Template for displaying search forms.
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 ?>
 <form id="searchform" class="row g-0" action="<?php echo esc_url( home_url( '/' ) ) ?>" method="get">

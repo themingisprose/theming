@@ -1,8 +1,8 @@
 <?php
 /**
- * Header file for Theming_ WordPress theme
+ * Header file for Theming WordPress theme
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 ?><!DOCTYPE html>
 

@@ -2,7 +2,7 @@
 /**
  * Display the entry author bio
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 
 if ( get_the_author_meta( 'description' ) ) :

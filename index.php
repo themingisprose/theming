@@ -2,7 +2,7 @@
 /**
  * The main template file
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 
 get_header();
@@ -15,7 +15,7 @@ get_header();
 
 				while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'parts/content', get_post_type() );
 
 				endwhile;
 

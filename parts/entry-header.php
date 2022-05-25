@@ -2,7 +2,7 @@
 /**
  * Display the post header
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 ?>
 

@@ -3,7 +3,7 @@
  * Posts navigation
  * @param object $the_query 	Default to $wp_query object.
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_posts_navigation( $the_query = null ){
 	if ( ! $the_query )
@@ -59,7 +59,7 @@ function theming_posts_navigation( $the_query = null ){
 /**
  * Make comments form fields Bootstrap like
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_comment_form_fields(){
 	$commenter 	= wp_get_current_commenter();
@@ -105,7 +105,7 @@ add_filter('comment_form_field_comment', 'theming_comment_form_textarea');
  * @param int    $size The icon size in pixels.
  * @return string
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_get_icon_svg( $group, $icon, $size = 24 ) {
 	return Theming_SVG_Icons::get_svg( $group, $icon, $size );

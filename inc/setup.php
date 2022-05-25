@@ -2,7 +2,7 @@
 /**
  * Add theme support
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_setup(){
 
@@ -42,7 +42,7 @@ function theming_setup(){
 	 * Filters the custom background arguments
 	 * @param array $cb_defaults 	Array of arguments
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	add_theme_support( 'custom-background', apply_filters( 'theming_custom_brackground_args', $cb_defaults ) );
 
@@ -66,7 +66,7 @@ function theming_setup(){
 	 * Filters the custom headers arguments
 	 * @param array $ch_defaults 	Array of arguments
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'theming_custom_header_args', $ch_defaults ) );
 
@@ -83,7 +83,7 @@ function theming_setup(){
 	 * Filters the custom logo arguments
 	 * @param array $cl_defaults 	Array of arguments
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	add_theme_support( 'custom-logo', apply_filters( 'theming_custom_logo_args', $cl_defaults ) );
 
@@ -122,7 +122,7 @@ function theming_setup(){
 	 * Filters menu locations
 	 * @param array $locations 		Array of locations
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	register_nav_menus( apply_filters( 'theming_menu_locations', $locations ) );
 }
@@ -131,7 +131,7 @@ add_action( 'after_setup_theme', 'theming_setup' );
 /**
  * Register Sidebars
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_register_sidebars(){
 

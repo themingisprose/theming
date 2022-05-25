@@ -2,13 +2,13 @@
 /**
  * The default template for displaying content
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 ?>
 
 <article id="post-<?php the_ID() ?>" <?php post_class() ?>>
 
-	<?php get_template_part( 'template-parts/entry-header' ); ?>
+	<?php get_template_part( 'parts/entry-header' ); ?>
 
 	<div class="entry-content mx-auto">
 
@@ -24,7 +24,7 @@
 
 	<?php
 	if ( ! is_page() )
-		get_template_part( 'template-parts/entry-footer' );
+		get_template_part( 'parts/entry-footer' );
 	?>
 
 </article>

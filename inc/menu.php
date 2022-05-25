@@ -2,7 +2,7 @@
 /**
  * Add custom classes to nav menu
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_menu_css_class( $classes, $item, $args ){
 	if( isset( $args->item_class ) ) :
@@ -20,7 +20,7 @@ add_filter( 'nav_menu_css_class', 'theming_menu_css_class', 1, 3 );
  * @param int    $size The icon size in pixels.
  * @return string
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_get_social_link_svg( $uri, $size = 24 ) {
 	return Theming_SVG_Icons::get_social_link_svg( $uri, $size );
@@ -35,7 +35,7 @@ function theming_get_social_link_svg( $uri, $size = 24 ) {
  * @param stdClass $args        An object of wp_nav_menu() arguments.
  * @return string The menu item output with social icon.
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 function theming_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Change SVG icon inside social links menu if there is supported URL.

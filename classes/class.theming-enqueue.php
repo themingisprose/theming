@@ -2,7 +2,7 @@
 /**
  * Enqueue scripts and styles
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 class Theming_Enqueue
 {
@@ -15,19 +15,18 @@ class Theming_Enqueue
 	/**
 	 * Enqueue
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	public function init()
 	{
 		add_action( 'wp_enqueue_scripts', array( $this, 'styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_styles' ) );
 	}
 
 	/**
 	 * Handle styles
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	public function styles()
 	{
@@ -38,7 +37,7 @@ class Theming_Enqueue
 	/**
 	 * Handle scripts
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	public function scripts()
 	{
@@ -57,7 +56,7 @@ class Theming_Enqueue
 	/**
 	 * Get Instance
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
     public static function get_instance() : self
     {

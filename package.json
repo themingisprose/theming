@@ -1,6 +1,6 @@
 {
-  "name": "theming_",
-  "version": "0.0.1",
+  "name": "theming",
+  "version": "1.0.0",
   "description": "WordPress Framework",
   "scripts": {
     "build": "npm run css && webpack --config webpack.prod.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/themingisprose/theming_.git"
+    "url": "git+https://github.com/themingisprose/theming.git"
   },
   "keywords": [
     "wordpress",
@@ -22,9 +22,9 @@
   "author": "Theming is Prose",
   "license": "GPL-2.0-or-later",
   "bugs": {
-    "url": "https://github.com/themingisprose/theming_/issues"
+    "url": "https://github.com/themingisprose/theming/issues"
   },
-  "homepage": "https://github.com/themingisprose/theming_#readme",
+  "homepage": "https://github.com/themingisprose/theming#readme",
   "devDependencies": {
     "@popperjs/core": "^2.11.5",
     "autoprefixer": "^10.4.7",

@@ -4,7 +4,7 @@
  * This class is a clone of Twenty_Twenty_One_SVG_Icons of Twenty Twenty-One theme
  * @link https://themes.trac.wordpress.org/browser/twentytwentyone/1.2/classes/class-twenty-twenty-one-svg-icons.php
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 class Theming_SVG_Icons
 {
@@ -14,7 +14,7 @@ class Theming_SVG_Icons
 	 *
 	 * @access protected
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 *
 	 * @var array
 	 */
@@ -59,7 +59,7 @@ class Theming_SVG_Icons
 	 *
 	 * @access protected
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 *
 	 * @var array
 	 */
@@ -117,7 +117,7 @@ class Theming_SVG_Icons
 	 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 	 * specify all the domains it covers (including the .com TLD too, if applicable).
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 *
 	 * @var array
 	 */
@@ -186,7 +186,7 @@ class Theming_SVG_Icons
 	 * @param int    $size The icon-size in pixels.
 	 * @return string
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	public static function get_svg( $group, $icon, $size ) {
 
@@ -204,7 +204,7 @@ class Theming_SVG_Icons
 		 * The dynamic portion of the hook name, `$group`, refers to
 		 * the name of the group of icons, either "ui" or "social".
 		 *
-		 * @since Theming_ 0.0.1
+		 * @since Theming 1.0.0
 		 *
 		 * @param array $arr Array of icons.
 		 */
@@ -229,7 +229,7 @@ class Theming_SVG_Icons
 	 * @param int    $size The icon-size in pixels.
 	 * @return string|null
 	 *
-	 * @since Theming_ 0.0.1
+	 * @since Theming 1.0.0
 	 */
 	public static function get_social_link_svg( $uri, $size )
 	{
@@ -244,7 +244,7 @@ class Theming_SVG_Icons
 			 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 			 * specify all the domains it covers (including the .com TLD too, if applicable).
 			 *
-			 * @since Theming_ 0.0.1
+			 * @since Theming 1.0.0
 			 *
 			 * @param array $social_icons_map Array of default social icons.
 			 */
@@ -253,7 +253,7 @@ class Theming_SVG_Icons
 			/**
 			 * Filters Theming_'s array of social icons.
 			 *
-			 * @since Theming_ 0.0.1
+			 * @since Theming 1.0.0
 			 *
 			 * @param array $social_icons Array of default social icons.
 			 */

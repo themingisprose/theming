@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 ?>
 

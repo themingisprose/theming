@@ -2,7 +2,7 @@
 /**
  * Template for displaying the sidebar.
  *
- * @since Theming_ 0.0.1
+ * @since Theming 1.0.0
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' )
